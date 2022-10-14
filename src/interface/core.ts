@@ -1,1 +1,1 @@
-export type Storage =  'sessionStorage' | 'localStorage'
+export type Storage = 'sessionStorage' | 'localStorage'

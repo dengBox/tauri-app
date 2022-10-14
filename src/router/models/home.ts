@@ -12,7 +12,7 @@ const oneDayRoute: Array<RouteRecordRaw> = [
   {
     path: '/home',
     name: 'home',
-    component: () => import(/* webpackChunkName: "home" */ '@/views/home/Index.vue')
+    component: () => import(/* webpackChunkName: "home" */ '@/views/home/HomeIndex.vue')
   }
 ]
 

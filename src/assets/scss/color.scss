@@ -1,0 +1,47 @@
+// Prefix
+$css-prefix : bs-;
+
+// Color
+$primary-color      : #0673FC; // 主题色
+$gradual-color      : #33ddff; // 渐变颜色
+$success-color      : #39BD65;
+$warning-color      : #FFA033;
+$error-color        : #F05656;
+$normal-color       : #1F2E4D; // 正常字体颜色
+$unimportance-color : #8F9BB3; // 不重要字体颜色
+$placeholder-color  : #E6E9F0; // 占位颜色，分割线显色
+$link-color         : #0673FC;
+$link-hover-color   : tint($link-color, 20%);
+$link-active-color  : shade($link-color, 5%);
+
+// Base
+$component-background  : #fff;
+$background-color-base : #F1F3F5;
+$font-family            : Microsoft YaHei, PingFangSC-Regular, sans-serif;
+$font-size-large     : 14px;
+$font-size-base      : 12px;
+$font-size-small     : 10px;
+$border-radius-base : 4px;
+
+
+// Border color
+$border-color-base  : #E6E9F0; // outside
+$border-color-split : #e6e8f0; // inside
+$border-width-base  : 1px; // width of the border for a component
+$border-style-base  : solid; // style of a components border
+
+// Z-index
+$zindex-spin         : 8;
+$zindex-back-top     : 10;
+$zindex-modal        : 1000;
+$zindex-message      : 1010;
+$zindex-transfer     : 1060;
+$zindex-notification : 1010;
+$zindex-loading      : 2000;
+$zindex-fullscreen   : 2010;
+$zindex-content      : 2011; // 内容层级最高
+
+// Animation
+$animation-time : .3s;
+$transition-time : .2s;
+$ease-in-out : ease-in-out;

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Common from '../views/Common.vue'
+import Common from '@/views/Common.vue'
 
 // 自动导入其他 router 文件
 const directives = import.meta.globEager('./models/**')
@@ -18,17 +18,29 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       ...routerList
     ]
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import(/* webpackChunkName: "login" */ '@/views/login/LoginIndex.vue')
   }
-  // {
-  //   path: '/login',
-  //   name: 'login',
-  //   component:
-  // }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes
+})
+
+const token = true
+
+router.beforeEach((to, from, next) => {
+  if (to.path === '/' || to.path === '/login') {
+    return next(!token ? '/login' : 'home')
+  }
+  if (!token) {
+    return next('/login')
+  }
+  next()
 })
 
 export default router
