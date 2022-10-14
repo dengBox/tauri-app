@@ -11,15 +11,16 @@ interface MapCnfig {
 }
 
 export default class Map extends BaseMap {
-  readonly DEFAULT_CONFIG: BaseMapCnfig = {
-    width: 1920,
-    height: 1080
+  readonly MAP_CONFIG: BaseMapCnfig = {
+    width: 2000,
+    height: 2000
   }
 
-  readonly MAP_CONFIG: BaseMapCnfig
   constructor (options: BaseMapOptions & MapCnfig) {
     super(options)
-    this.MAP_CONFIG = options.config || this.DEFAULT_CONFIG
+    if (options.config) {
+      this.MAP_CONFIG = options.config
+    }
   }
 
   render () {
@@ -27,7 +28,34 @@ export default class Map extends BaseMap {
   }
 
   initMapStyle () {
-    const el = this.ctx!.canvas
-    el.style.cssText = `width: ${this.MAP_CONFIG.width}px; height: ${this.MAP_CONFIG.height}px;`
+    const ctx = this.ctx!
+    ctx.canvas.width = this.MAP_CONFIG.width
+    ctx.canvas.height = this.MAP_CONFIG.height
+    // ctx.canvas.style.cssText = `
+    //   width: ${this.MAP_CONFIG.width}px;
+    //   height: ${this.MAP_CONFIG.height}px;
+    // `
+    ctx.strokeStyle = '#fff'
+    const boxW = 100
+    let wNum = this.MAP_CONFIG.width / boxW
+    while (wNum > 0) {
+      const x = wNum * boxW
+      ctx.beginPath()
+      ctx.moveTo(x, 0)
+      ctx.lineTo(x, this.MAP_CONFIG.height)
+      ctx.stroke()
+      --wNum
+    }
+
+    const boxH = 100
+    let hNum = this.MAP_CONFIG.height / boxH
+    while (hNum > 0) {
+      const x = hNum * boxH
+      ctx.beginPath()
+      ctx.moveTo(0, x)
+      ctx.lineTo(this.MAP_CONFIG.width, x)
+      ctx.stroke()
+      --hNum
+    }
   }
 }

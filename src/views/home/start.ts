@@ -6,19 +6,18 @@ import User from './models/user'
 interface GameOptions {
   autoStart?: boolean,
   baseMapEl: HTMLCanvasElement,
-  userEl: HTMLCanvasElement
+  userEl: HTMLCanvasElement,
+  aerialEl: HTMLCanvasElement,
+  // userViewEl: HTMLDivElement
 }
 
 export default class GameInstance {
   readonly config: GameOptions
   BASE_MAP: BaseMap | undefined
   USER_INSTANCE: BaseMap | undefined
-  constructor ({ baseMapEl, userEl, autoStart }: GameOptions) {
-    this.config = {
-      baseMapEl,
-      userEl
-    }
-    if (autoStart) {
+  constructor (option: GameOptions) {
+    this.config = option
+    if (option.autoStart) {
       this.start()
     }
   }
@@ -33,5 +32,9 @@ export default class GameInstance {
     this.USER_INSTANCE = new User({ el: this.config.userEl })
     this.USER_INSTANCE.render()
     log('user init end!')
+  }
+
+  destory () {
+    // this.BASE_MAP.stop()
   }
 }

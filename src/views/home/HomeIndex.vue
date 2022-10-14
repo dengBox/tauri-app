@@ -1,7 +1,11 @@
 <template>
   <div class="home-view">
+    <!-- 地图 -->
     <canvas id="base-map" ref="baseMap"></canvas>
+    <!-- 用户 -->
     <canvas id="user-instance" ref="userInstance"></canvas>
+    <!-- 鸟瞰 -->
+    <canvas id="aerial-view" ref="aerialView"></canvas>
     <!-- 背景音乐 -->
     <audio src=""></audio>
     <!-- 特效音乐 -->
@@ -16,48 +20,52 @@ import GameInstance from './start'
 import { ref, onMounted, onUnmounted } from 'vue'
 const baseMap = ref()
 const userInstance = ref()
-let GAME_INSTANCE
+const aerialView = ref()
 
-// 响应式状态
-// const count = ref(0)
-
-// 用来修改状态、触发更新的函数
-// function increment() {
-//   count.value++
-// }
-
-function keyDown (event: KeyboardEvent) {
-  console.log('keydown', event)
-}
+let GAME_INSTANCE: GameInstance
 
 // 生命周期钩子
 onMounted(() => {
   GAME_INSTANCE = new GameInstance({
     baseMapEl: baseMap.value,
-    userEl: userInstance.value
+    userEl: userInstance.value,
+    aerialEl: aerialView.value
   })
   GAME_INSTANCE.start()
-  window.addEventListener('keydown', keyDown)
 })
 onUnmounted(() => {
-  window.removeEventListener('keydown', keyDown)
+  GAME_INSTANCE.destory()
 })
 </script>
 
 <style scoped lang="scss">
 .home-view {
-  width: 100vw;
+  width: 80vw;
   height: 100vh;
   font-size: 0;
   overflow: auto;
+  // pointer-events:none;
+  transform: rotateX(30deg);
+  // perspective-origin: 0, 0;
+  transform-style: preserve-3d;
   &::-webkit-scrollbar {
     display: none;
   }
  #base-map {
-  background: #000;
+  background-color: #000;
  }
  #user-instance {
-  background: #f00;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+ }
+ #aerial-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
  }
 }
 </style>
