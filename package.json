@@ -9,7 +9,7 @@
     "tauri-build": "tauri build",
     "tauri": "tauri",
     "test": "jest --coverage",
-    "lint": "eslint --ext .js,.vue src --fix",
+    "lint": "eslint --ext .js,.vue src --fix --cache",
     "cz": "npm run log && git add . && git cz",
     "log": "conventional-changelog --config ./node_modules/vue-cli-plugin-commitlint/lib/log -i CHANGELOG.md -s -r 0",
     "prepare": "husky install",
@@ -19,6 +19,7 @@
     "@tauri-apps/api": "^1.1.0",
     "axios": "^1.1.2",
     "element-plus": "^2.2.17",
+    "lint-staged": "^13.1.0",
     "pinia": "^2.0.23",
     "vue": "^3.2.40",
     "vue-axios": "^3.4.1",
@@ -73,9 +74,15 @@
     "url": ""
   },
   "homepage": "https://xxx.com",
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+  "lint-staged": {
+    "*": [
+      "prettier --write --cache --ignore-unknown"
+    ],
+    "src/*/{src,types}/**/*.ts": [
+      "eslint --cache --fix"
+    ],
+    "src/**/*.d.ts": [
+      "eslint --cache --fix"
+    ]
   }
 }
