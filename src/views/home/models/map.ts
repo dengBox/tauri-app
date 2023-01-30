@@ -12,8 +12,8 @@ interface MapCnfig {
 
 export default class Map extends BaseMap {
   readonly MAP_CONFIG: BaseMapCnfig = {
-    width: 2000,
-    height: 2000
+    width: 10000,
+    height: 10000
   }
 
   constructor (options: BaseMapOptions & MapCnfig) {
@@ -36,7 +36,7 @@ export default class Map extends BaseMap {
     //   height: ${this.MAP_CONFIG.height}px;
     // `
     ctx.strokeStyle = '#fff'
-    const boxW = 100
+    const boxW = 50
     let wNum = this.MAP_CONFIG.width / boxW
     while (wNum > 0) {
       const x = wNum * boxW
@@ -47,7 +47,7 @@ export default class Map extends BaseMap {
       --wNum
     }
 
-    const boxH = 100
+    const boxH = 50
     let hNum = this.MAP_CONFIG.height / boxH
     while (hNum > 0) {
       const x = hNum * boxH

@@ -5,11 +5,13 @@ export interface BaseMapOptions {
 }
 
 export class BaseMap {
+  el: HTMLCanvasElement
   ctx: CanvasRenderingContext2D | null = null
   constructor ({ el } : BaseMapOptions) {
     if (!el) {
       blockError('Please set el attribute!')
     }
+    this.el = el
     this.ctx = el.getContext('2d')
   }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="home-view">
+  <div class="home-view" ref="mapView">
     <!-- 地图 -->
     <canvas id="base-map" ref="baseMap"></canvas>
     <!-- 用户 -->
@@ -18,6 +18,7 @@
 <script setup lang="tsx">
 import GameInstance from './start'
 import { ref, onMounted, onUnmounted } from 'vue'
+const mapView = ref()
 const baseMap = ref()
 const userInstance = ref()
 const aerialView = ref()
@@ -27,6 +28,7 @@ let GAME_INSTANCE: GameInstance
 // 生命周期钩子
 onMounted(() => {
   GAME_INSTANCE = new GameInstance({
+    mapViewEl: mapView.value,
     baseMapEl: baseMap.value,
     userEl: userInstance.value,
     aerialEl: aerialView.value
@@ -37,17 +39,18 @@ onUnmounted(() => {
   GAME_INSTANCE.destory()
 })
 </script>
-
+s
 <style scoped lang="scss">
 .home-view {
-  width: 80vw;
+  width: 100vw;
   height: 100vh;
   font-size: 0;
   overflow: auto;
+  scroll-behavior: smooth;
   // pointer-events:none;
-  transform: rotateX(30deg);
   // perspective-origin: 0, 0;
-  transform-style: preserve-3d;
+  // transform: rotateX(30deg);
+  // transform-style: preserve-3d;
   &::-webkit-scrollbar {
     display: none;
   }
