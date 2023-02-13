@@ -7,7 +7,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "tauri-app",
+    "productName": "tauri-example",
     "version": "0.1.0"
   },
   "tauri": {
