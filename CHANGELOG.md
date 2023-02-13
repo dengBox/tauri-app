@@ -20,6 +20,7 @@
 范围|描述|commitId
 --|--|--
  - | add github actions | [5413ad8](https://github.com/dengBox/tauri-app/commit/5413ad8)
+ - | update pnpm | [a9f94de](https://github.com/dengBox/tauri-app/commit/a9f94de)
 
 
 ### 🔨 代码重构
