@@ -9,6 +9,12 @@
  - | update user canvas | [04c32da](https://github.com/dengBox/tauri-app/commit/04c32da)
 
 
+### 🐛 Bug 修复
+范围|描述|commitId
+--|--|--
+ - | update bind | [8945293](https://github.com/dengBox/tauri-app/commit/8945293)
+
+
 ### 🔨 代码重构
 范围|描述|commitId
 --|--|--
