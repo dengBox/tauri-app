@@ -27,9 +27,12 @@ export default class User extends BaseMap {
     startY: 0
   }
 
+  _keyDown
+
   constructor (options: BaseMapOptions & UserConfig) {
     super(options)
     this.mapEl = options.mapEl
+    this._keyDown = this.keyDown.bind(this)
     if (options.config) {
       this.USER_CONFIG = options.config
     }
@@ -64,11 +67,11 @@ export default class User extends BaseMap {
   }
 
   protected initKeyEvent () {
-    addEvent('keydown', this.keyDown.bind(this))
+    addEvent('keydown', this._keyDown)
   }
 
   protected destory () {
-    delEvent('keydown', this.keyDown)
+    delEvent('keydown', this._keyDown)
   }
 
   keyDown (event: Event) {

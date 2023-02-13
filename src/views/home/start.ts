@@ -16,8 +16,13 @@ export default class GameInstance {
   readonly config: GameOptions
   BASE_MAP: BaseMap | undefined
   USER_INSTANCE: BaseMap | undefined
+  _showGame
+  _scrollView
+
   constructor (option: GameOptions) {
     this.config = option
+    this._showGame = this.showGame.bind(this)
+    this._scrollView = this.showGame.bind(this)
     if (option.autoStart) {
       this.start()
     }
@@ -36,8 +41,8 @@ export default class GameInstance {
     })
     this.USER_INSTANCE.render()
     log('user init end!')
-    addEvent('visibilitychange', this.showGame.bind(this))
-    addEvent('mousewheel', this.scrollView.bind(this), this.config.mapViewEl)
+    addEvent('visibilitychange', this._showGame)
+    addEvent('mousewheel', this._scrollView, this.config.mapViewEl)
   }
 
   showGame () {
@@ -60,7 +65,7 @@ export default class GameInstance {
   }
 
   destory () {
-    delEvent('visibilitychange', this.showGame)
-    delEvent('mousewheel', this.scrollView, this.config.mapViewEl)
+    delEvent('visibilitychange', this._showGame)
+    delEvent('mousewheel', this._scrollView, this.config.mapViewEl)
   }
 }
