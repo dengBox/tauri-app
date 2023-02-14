@@ -1,4 +1,4 @@
-import { AxiosRequestHeaders } from 'axios'
+import { AxiosRequestHeaders } from 'axios';
 
 // export interface HttpParams extends AxiosRequestConfig {
 //   url: string

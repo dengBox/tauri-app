@@ -6,12 +6,6 @@ html, body {
 }
 
 #app {
-  overflow: hidden;
-  perspective: 800px;
-  background-color: #666;
-  display: flex;
-  justify-content: center;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  width: 100vw;
+  height: 100vh;
 }

@@ -1,14 +1,17 @@
+const dayjs = require('dayjs')
+
 module.exports = {
-  testMatch: ['**/tests/**/*.[jt]s?(x)'],
+  preset: 'ts-jest',
+  testEnvironment: 'node',
   reporters: [
     'default',
-    ['./node_modules/jest-html-reporter', {
-      pageTitle: 'test shsc-ui'
-    }]
-  ],
-  transform: {
-    // 将.js后缀的文件使用babel-jest处理
-    '^.+\\.js$': 'babel-jest'
-    // '^.+\\.(ts|tsx)$': 'ts-jest'
-  }
+    [
+      'jest-html-reporter',
+      {
+        pageTitle: 'Jest Report',
+        outputPath: `./report/${dayjs().format('YYYY-MM-DD')}.html`,
+        includeFailureMsg: true
+      }
+    ]
+  ]
 }

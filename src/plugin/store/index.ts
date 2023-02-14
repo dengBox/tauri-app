@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia'
-import useUserStore from './models/user'
+import { defineStore } from 'pinia';
+import useUserStore from './models/user';
 
 export const useStore = defineStore('main', {
   state: () => ({
@@ -12,7 +12,7 @@ export const useStore = defineStore('main', {
   },
   actions: {
     increment () {
-      this.count++
+      this.count++;
     }
   }
-})
+});

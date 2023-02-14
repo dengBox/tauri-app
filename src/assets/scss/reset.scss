@@ -6,11 +6,7 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, form, f
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-}
-
-ul, ol {
+ul, ol, li {
   list-style: none;
   box-sizing: border-box;
 }
@@ -30,12 +26,11 @@ table {
   box-sizing: border-box;
 }
 
-div {
+div, main, footer, header, article, section {
   box-sizing: border-box;
 }
 
 body {
-  color: #333;
   font: #{$font-size-large} / 1.5 #{$font-family};
   overflow-y: auto;
 }

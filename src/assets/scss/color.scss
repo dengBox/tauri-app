@@ -3,7 +3,6 @@ $css-prefix : bs-;
 
 // Color
 $primary-color      : #0673FC; // 主题色
-$gradual-color      : #33ddff; // 渐变颜色
 $success-color      : #39BD65;
 $warning-color      : #FFA033;
 $error-color        : #F05656;
@@ -18,10 +17,10 @@ $link-active-color  : shade($link-color, 5%);
 $component-background  : #fff;
 $background-color-base : #F1F3F5;
 $font-family            : Microsoft YaHei, PingFangSC-Regular, sans-serif;
-$font-size-large     : 14px;
 $font-size-base      : 12px;
 $font-size-small     : 10px;
-$border-radius-base : 4px;
+$font-size-large     : 14px;
+$border-radius-base : 2px;
 
 
 // Border color
@@ -32,13 +31,6 @@ $border-style-base  : solid; // style of a components border
 
 // Z-index
 $zindex-spin         : 8;
-$zindex-back-top     : 10;
-$zindex-modal        : 1000;
-$zindex-message      : 1010;
-$zindex-transfer     : 1060;
-$zindex-notification : 1010;
-$zindex-loading      : 2000;
-$zindex-fullscreen   : 2010;
 $zindex-content      : 2011; // 内容层级最高
 
 // Animation
