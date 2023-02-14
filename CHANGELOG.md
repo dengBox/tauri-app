@@ -1,4 +1,4 @@
-## 0.0.1 (2023-02-13)
+## 0.0.1 (2023-02-14)
 
 ### 🌟 新功能
 范围|描述|commitId
@@ -21,6 +21,7 @@
 --|--|--
  - | add github actions | [5413ad8](https://github.com/dengBox/tauri-app/commit/5413ad8)
  - | update pnpm | [a9f94de](https://github.com/dengBox/tauri-app/commit/a9f94de)
+ - | updatee github actions | [696df19](https://github.com/dengBox/tauri-app/commit/696df19)
 
 
 ### 🔨 代码重构
@@ -31,6 +32,8 @@
 
 范围|描述|commitId
 --|--|--
+ - | Delete main.yml | [426124b](https://github.com/dengBox/tauri-app/commit/426124b)
+ - | Create release.yml | [9211b81](https://github.com/dengBox/tauri-app/commit/9211b81)
  - | Create main.yml | [01cd506](https://github.com/dengBox/tauri-app/commit/01cd506)
  - | Create read.md | [f9d1ca9](https://github.com/dengBox/tauri-app/commit/f9d1ca9)
 
