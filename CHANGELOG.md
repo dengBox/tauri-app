@@ -1,4 +1,5 @@
-## 0.0.1 (2023-02-14)
+## [0.0.1](https://github.com/dengBox/tauri-app/compare/v0.1.0...v0.0.1) (2023-02-14)
+# [0.1.0](https://github.com/dengBox/tauri-app/compare/f9d1ca9...v0.1.0) (2023-02-14)
 
 ### 🌟 新功能
 范围|描述|commitId
@@ -20,6 +21,7 @@
 范围|描述|commitId
 --|--|--
  - | add github actions | [5413ad8](https://github.com/dengBox/tauri-app/commit/5413ad8)
+ - | test ci | [acd6b3c](https://github.com/dengBox/tauri-app/commit/acd6b3c)
  - | update pnpm | [a9f94de](https://github.com/dengBox/tauri-app/commit/a9f94de)
  - | updatee github actions | [696df19](https://github.com/dengBox/tauri-app/commit/696df19)
 
