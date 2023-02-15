@@ -19,7 +19,7 @@ export default defineComponent({
         <main>
           {
             numList.value.map((num, i) => {
-              return <span class={{ 'blue-ball': i > 4, 'red-ball': i < 5 }}>{num}</span>;
+              return <span class={{ 'blue-ball': i > 4, 'red-ball': i < 5 }}>{num < 10 ? '0' + num : num}</span>;
             })
           }
         </main>

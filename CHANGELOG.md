@@ -1,4 +1,20 @@
 ## [0.0.1](https://github.com/dengBox/tauri-app/compare/v0.1.0...v0.0.1) (2023-02-14)
+
+### 📦 持续集成
+范围|描述|commitId
+--|--|--
+ - | update ci | [daaa18c](https://github.com/dengBox/tauri-app/commit/daaa18c)
+
+
+范围|描述|commitId
+--|--|--
+ - | Update release.yml | [12cf1ce](https://github.com/dengBox/tauri-app/commit/12cf1ce)
+ - | Update release.yml | [eb23316](https://github.com/dengBox/tauri-app/commit/eb23316)
+ - | Update release.yml | [fdeef21](https://github.com/dengBox/tauri-app/commit/fdeef21)
+ - | Update release.yml | [57fb2b7](https://github.com/dengBox/tauri-app/commit/57fb2b7)
+ - | Update release.yml | [c9b7b7f](https://github.com/dengBox/tauri-app/commit/c9b7b7f)
+ - | Update release.yml | [f19cc1a](https://github.com/dengBox/tauri-app/commit/f19cc1a)
+
 # [0.1.0](https://github.com/dengBox/tauri-app/compare/f9d1ca9...v0.1.0) (2023-02-14)
 
 ### 🌟 新功能
