@@ -1,10 +1,10 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
-import { resolve } from 'path'
+import { resolve } from 'path';
 
-const REPLACEMENT = `${resolve(__dirname, './src')}/`
+const REPLACEMENT = `${resolve(__dirname, './src')}/`;
 
 export default defineConfig({
   server: {
@@ -22,4 +22,4 @@ export default defineConfig({
       }
     ]
   }
-})
+});

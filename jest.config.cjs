@@ -1,4 +1,4 @@
-const dayjs = require('dayjs')
+const dayjs = require('dayjs');
 
 module.exports = {
   preset: 'ts-jest',
@@ -14,4 +14,4 @@ module.exports = {
       }
     ]
   ]
-}
+};

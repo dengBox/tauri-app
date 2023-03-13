@@ -1,3 +1,11 @@
+## [0.0.1](https://github.com/dengBox/tauri-app/compare/v0.0.2...v0.0.1) (2023-03-13)
+## [0.0.2](https://github.com/dengBox/tauri-app/compare/v0.0.1...v0.0.2) (2023-02-15)
+
+### 🐛 Bug 修复
+范围|描述|commitId
+--|--|--
+ - | fix num filter | [c80e717](https://github.com/dengBox/tauri-app/commit/c80e717)
+
 ## [0.0.1](https://github.com/dengBox/tauri-app/compare/v0.1.0...v0.0.1) (2023-02-14)
 
 ### 📦 持续集成
