@@ -1,8 +1,8 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBuildCommand": "yarn build",
-    "beforeDevCommand": "yarn serve",
+    "beforeBuildCommand": "pnpm build",
+    "beforeDevCommand": "pnpm serve",
     "devPath": "http://localhost:2999",
     "distDir": "../dist"
   },
@@ -12,7 +12,19 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": true,
+      "http":{
+        "scope":[
+          "http://**",
+          "https://**"
+        ]
+      },
+      "fs": {
+        "all": true,
+        "scope": [
+          "$RESOURCE/*"
+        ]
+      }
     },
     "bundle": {
       "active": true,
@@ -32,13 +44,15 @@
       "identifier": "com.tauri.dev1",
       "longDescription": "",
       "macOS": {
+        "exceptionDomain": null,
         "entitlements": null,
-        "exceptionDomain": "",
         "frameworks": [],
         "providerShortName": null,
         "signingIdentity": null
       },
-      "resources": [],
+      "resources": [
+        "resources/*"
+      ],
       "shortDescription": "",
       "targets": "all",
       "windows": {
@@ -55,11 +69,14 @@
     },
     "windows": [
       {
-        "fullscreen": false,
-        "height": 600,
-        "resizable": true,
         "title": "Tauri App",
-        "width": 800
+        "url": "http://devhaina.shuhaisc.io",
+        "width": 1440,
+        "height": 900,
+        "maxWidth": 767,
+        "fullscreen": false,
+        "resizable": true,
+        "center": true
       }
     ]
   }

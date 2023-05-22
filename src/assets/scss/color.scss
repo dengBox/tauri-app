@@ -14,13 +14,15 @@ $link-hover-color   : tint($link-color, 20%);
 $link-active-color  : shade($link-color, 5%);
 
 // Base
-$component-background  : #fff;
-$background-color-base : #F1F3F5;
+$base-background  : #fff;
+$body-background : #F1F3F5;
 $font-family            : Microsoft YaHei, PingFangSC-Regular, sans-serif;
 $font-size-base      : 12px;
 $font-size-small     : 10px;
 $font-size-large     : 14px;
-$border-radius-base : 2px;
+$border-radius-base : 3px;
+$base-margin        :12px;
+$base-padding        :14px;
 
 
 // Border color

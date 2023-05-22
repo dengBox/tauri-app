@@ -30,7 +30,13 @@ div, main, footer, header, article, section {
   box-sizing: border-box;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font: #{$font-size-large} / 1.5 #{$font-family};
   overflow-y: auto;
+  color: $normal-color;
+  background-color: $body-background;
 }

@@ -10,6 +10,9 @@ docs/
 ## test
 tests/
 
+## tauri
+src-tauri/
+
 ## config
 jsconfig.json
 

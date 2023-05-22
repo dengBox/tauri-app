@@ -1,6 +1,6 @@
 <template>
   <div class="login-view">
-
+    <el-button type="primary" @click="goCommon">login</el-button>
   </div>
 </template>
 
@@ -14,6 +14,11 @@ export default {
     return {
 
     };
+  },
+  methods: {
+    goCommon () {
+      this.$router.push('/common/test/index');
+    }
   }
 };
 </script>

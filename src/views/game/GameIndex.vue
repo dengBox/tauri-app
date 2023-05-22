@@ -1,3 +1,4 @@
+<script lang="tsx">
 import './index.scss';
 import { defineComponent, ref } from 'vue';
 import { invoke } from '@tauri-apps/api/tauri';
@@ -30,3 +31,4 @@ export default defineComponent({
     };
   }
 });
+</script>

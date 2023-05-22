@@ -7,8 +7,5 @@ export default defineStore('user', {
     };
   },
   actions: {
-    setList () {
-      this.userList = [];
-    }
   }
 });
