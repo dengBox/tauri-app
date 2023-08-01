@@ -44,6 +44,7 @@ const excludeList = [];
       flex: 1;
       overflow: hidden;
       .router-view {
+        overflow: hidden;
         margin: 0 $base-margin $base-margin $base-margin;
         padding: $base-padding;
         flex: 1;

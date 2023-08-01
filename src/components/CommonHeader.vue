@@ -1,6 +1,6 @@
 <template>
-  <div class="common-header">
-    <div class="left-logo" @click="expandMenu">
+  <div class="h-40px bg-#000 c-white flex">
+    <div class="p-l-20px w-200px flex flex-items-center font-600 cursor-pointer" @click="expandMenu">
       <img src="../../src-tauri/icons/32x32.png">
       <span>Tauri App</span>
     </div>
@@ -31,21 +31,3 @@ export default {
   }
 };
 </script>
-
-<style scoped lang="scss">
-.common-header {
-  height: 40px;
-  background: #000;
-  display: flex;
-  color: #fff;
-  .left-logo {
-    padding-left: 20px;
-    width: 200px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-weight: bold;
-  }
-}
-</style>

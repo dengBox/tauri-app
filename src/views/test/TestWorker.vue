@@ -17,5 +17,7 @@ worker.onmessage = (e) => {
 };
 
 worker.postMessage('hello from main');
+// 终止worker
+// worker.terminate()
 
 </script>

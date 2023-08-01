@@ -1,15 +1,8 @@
 <template>
-  <div class="common-footer">
+  <div class="bg-#000 h-0px">
 
   </div>
 </template>
 
 <script setup>
 </script>
-
-<style scoped lang="scss">
-.common-footer {
-  height: 40px;
-  background: #000;
-}
-</style>

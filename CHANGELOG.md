@@ -1,4 +1,16 @@
-## [0.0.1](https://github.com/dengBox/tauri-app/compare/v0.0.2...v0.0.1) (2023-03-13)
+## [0.0.1](https://github.com/dengBox/tauri-app/compare/v0.0.2...v0.0.1) (2023-08-01)
+
+### 🌟 新功能
+范围|描述|commitId
+--|--|--
+ - | 修改前端页面，增加测试路由 | [9a54a42](https://github.com/dengBox/tauri-app/commit/9a54a42)
+
+
+### 📦 持续集成
+范围|描述|commitId
+--|--|--
+ - | update lint | [4b364f9](https://github.com/dengBox/tauri-app/commit/4b364f9)
+
 ## [0.0.2](https://github.com/dengBox/tauri-app/compare/v0.0.1...v0.0.2) (2023-02-15)
 
 ### 🐛 Bug 修复

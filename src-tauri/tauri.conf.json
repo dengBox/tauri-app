@@ -70,13 +70,13 @@
     "windows": [
       {
         "title": "Tauri App",
-        "url": "http://devhaina.shuhaisc.io",
+        "url": "",
         "width": 1440,
         "height": 900,
-        "maxWidth": 767,
         "fullscreen": false,
         "resizable": true,
-        "center": true
+        "x": 0,
+        "y": 0
       }
     ]
   }

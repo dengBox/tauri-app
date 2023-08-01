@@ -1,9 +1,8 @@
 <template>
-  <article class="common-menu">
+  <article class="common-menu h-100% overflow-auto w-180px">
     <el-menu
       router
       :default-active="defaultMenu"
-      class="el-menu-vertical"
       :collapse="isCollapse"
       @select="selectMenu" >
       <el-sub-menu
@@ -138,7 +137,13 @@ const menuList = reactive([
     icon: shallowRef(IconMenu),
     children: [
       {
-        url: '/common/game/start',
+        url: '/common/game/soldier',
+        text: '小兵快跑',
+        icon: shallowRef(Cpu),
+        children: []
+      },
+      {
+        url: '/common/game/grand',
         text: '大乐透奥',
         icon: shallowRef(Cpu),
         children: []
@@ -170,8 +175,6 @@ watch(
 
 <style lang="scss" scoped>
 .common-menu {
-  height: 100%;
-  overflow: auto;
   box-shadow: 0px 2px 13px 0px rgba(175,175,175,0.47);
   background-color: $base-background;
   :deep(.el-menu) {

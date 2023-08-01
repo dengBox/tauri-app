@@ -4,5 +4,12 @@
 </template>
 
 <script lang="ts" setup>
+import Worker from '@/plugin/worker/wasm.worker?worker';
 
+const worker = new Worker();
+
+WebAssembly.compileStreaming(fetch('simple.wasm'))
+  .then(module => {
+    worker.postMessage(module);
+  });
 </script>

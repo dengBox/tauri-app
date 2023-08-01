@@ -6,6 +6,7 @@ import { createPinia } from 'pinia';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import router from './router';
+import 'virtual:uno.css';
 
 const app = createApp(App);
 

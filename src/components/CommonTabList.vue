@@ -1,19 +1,32 @@
 <template>
   <div class="common-tab">
     <ul class="tab-wrap" @click="clickTab">
-        <li class="tab-item" v-for="tab in tabList" :key="tab.path" :data-id="tab.id">
-          <span class="text">{{tab.label}}</span>
-          <el-icon class="icon" v-if="!tab.hideClose"><Close /></el-icon>
-        </li>
-      </ul>
-    <el-icon class="tab-menu" color="#1F2E4D"><ArrowDownBold /></el-icon>
+      <li :class="['tab-item', { 'tab-item-active': tab.path === route.path }]" v-for="tab in tabList" :key="tab.path" :data-id="tab.id">
+        <span class="text">{{tab.label}}</span>
+        <el-icon class="icon" v-if="!tab.hideClose"><Close /></el-icon>
+      </li>
+    </ul>
+    <el-dropdown trigger="click">
+      <span class="el-dropdown-link">
+        <el-icon class="tab-menu" color="#1F2E4D"><ArrowDownBold /></el-icon>
+      </span>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <!-- <el-dropdown-item :icon="Plus">Action 1</el-dropdown-item> -->
+          <el-dropdown-item>关闭左侧</el-dropdown-item>
+          <el-dropdown-item>关闭右侧</el-dropdown-item>
+          <el-dropdown-item>关闭其他</el-dropdown-item>
+          <el-dropdown-item>全部关闭</el-dropdown-item>
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { read, save, clear } from '@/plugin/storage';
 import { computed, onMounted, onUnmounted, watch, watchEffect, unref } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import useCommonStore from '@/plugin/store/models/common';
 import { uuid, deepCopy, getPrentDom } from '@/assets/ts/until';
 
@@ -26,6 +39,7 @@ import {
 
 const commonStore = useCommonStore();
 const router = useRouter();
+const route = useRoute();
 
 const tabList = computed(() => commonStore.tabList);
 
@@ -145,10 +159,13 @@ onUnmounted(() => {
       vertical-align: middle;
     }
   }
-  .tab-menu {
-    width: 32px;
-    height: 32px;
-    background-color: $base-background;
+  .el-dropdown-link {
+    .tab-menu {
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      background-color: $base-background;
+    }
   }
 }
 </style>
