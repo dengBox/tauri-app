@@ -4,6 +4,7 @@
 范围|描述|commitId
 --|--|--
  - | 修改前端页面，增加测试路由 | [9a54a42](https://github.com/dengBox/tauri-app/commit/9a54a42)
+ - | 增加文档示例 | [1b7a336](https://github.com/dengBox/tauri-app/commit/1b7a336)
 
 
 ### 📦 持续集成

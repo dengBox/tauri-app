@@ -81,8 +81,7 @@
   "homepage": "https://xxx.com",
   "lint-staged": {
     "src/*/{src,types}/**/*.ts": [
-      "npm run lint",
-      "git add ."
+      "npm run lint"
     ],
     "src/**/*.d.ts": [
       "npm run lint",
