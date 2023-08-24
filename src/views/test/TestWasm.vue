@@ -8,7 +8,7 @@ import Worker from '@/plugin/worker/wasm.worker?worker';
 
 const worker = new Worker();
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
+WebAssembly.compileStreaming(fetch('/wasm/simple.wasm'))
   .then(module => {
     worker.postMessage(module);
   });
