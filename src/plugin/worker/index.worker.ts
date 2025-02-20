@@ -1,11 +1,65 @@
-self.addEventListener(
-  'message',
-  function (e) {
-    console.log(navigator.hardwareConcurrency); // 获取cpu核数
-    console.log('index.worker.js', e.data);
-    self.postMessage('hello from worker');
+interface CodeMessage {
+  type: 'javascript',
+  value: string
+}
+
+const _window = new Proxy({
+  document: {
+    createElement: (...args: any) => {
+      self.postMessage({
+        type: 'FN',
+        target: 'document',
+        propKey: 'createElement',
+        params: args
+      });
+      self.addEventListener('message', (e) => {
+        console.log(e);
+      });
+      return {
+
+      };
+    }
+  }
+}, {
+  get: (target, propKey, receiver) => {
+    let type = '';
+    switch (propKey) {
+      case 'createElement':
+        type = 'FN';
+        break;
+    }
+    if (type) {
+      self.postMessage({
+        type,
+        target: 'document',
+        propKey
+      });
+    } else {
+      return Reflect.get(target, propKey, receiver);
+    }
   },
-  false
+  set: (target, propKey, value, receiver) => {
+    return Reflect.set(target, propKey, value);
+  }
+});
+
+self.addEventListener('message', function (e) {
+  if (e.type !== 'message') return;
+  const data = e.data as CodeMessage;
+  let fn;
+  switch (data.type) {
+    case 'javascript':
+      // eslint-disable-next-line no-new-func
+      fn = new Function(`
+      const document = this.document
+        ${data.value}
+      `);
+      break;
+  }
+  fn && fn.call(_window);
+  self.postMessage('hello from worker');
+},
+false
 );
 
 self.addEventListener(
