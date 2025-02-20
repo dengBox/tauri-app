@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { resolveResource } from '@tauri-apps/api/path';
-import { readTextFile } from '@tauri-apps/api/fs';
+import { readTextFile } from '@tauri-apps/plugin-fs';
 
 async function loadfile () {
   const resourcePath = await resolveResource('resources/test.json');

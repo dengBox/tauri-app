@@ -19,10 +19,10 @@ impl Random {
         while number < 7 {
             let new_num;
             if number < 5 {
-                new_num = red_list[rand::thread_rng().gen_range(1..red_list.len())];
+                new_num = red_list[rand::rng().random_range(1..red_list.len())];
                 red_list = red_list.into_iter().filter(|&x| x != new_num).collect();
             } else {
-                new_num = blue_list[rand::thread_rng().gen_range(1..blue_list.len())];
+                new_num = blue_list[rand::rng().random_range(1..blue_list.len())];
                 blue_list = blue_list.into_iter().filter(|&x| x != new_num).collect();
             }
             result_list.push(new_num);

@@ -1,6 +1,6 @@
 <template>
-  <div class="test-shell-wrap">
-    shell & process
+  <div class="test-keyboard-wrap">
+    mouse & keyboard
   </div>
 </template>
 

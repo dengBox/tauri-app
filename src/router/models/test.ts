@@ -63,6 +63,11 @@ const oneDayRoute: Array<RouteRecordRaw> = [
         path: 'index',
         name: 'testIndex',
         component: () => import(/* webpackChunkName: "TestIndex" */ '@/views/test/TestIndex.js')
+      },
+      {
+        path: 'keyboard',
+        name: 'testVirtualKeyboard',
+        component: () => import(/* webpackChunkName: "TestVirtualKeyboard" */ '@/views/test/TestVirtualkeyboard.vue')
       }
     ]
   }

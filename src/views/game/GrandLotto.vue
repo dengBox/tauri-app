@@ -1,7 +1,7 @@
 <script lang="tsx">
 import './index.scss';
 import { defineComponent, ref } from 'vue';
-import { invoke } from '@tauri-apps/api/tauri';
+import { invoke } from '@tauri-apps/api/core';
 
 export default defineComponent({
   name: 'GameIndex',
@@ -20,7 +20,9 @@ export default defineComponent({
         <main>
           {
             numList.value.map((num, i) => {
-              return <span class={{ 'blue-ball': i > 4, 'red-ball': i < 5 }}>{num < 10 ? '0' + num : num}</span>;
+              return <span class={{ 'blue-ball': i > 4, 'red-ball': i < 5 }}>
+                {num < 10 ? '0' + num : num}
+              </span>;
             })
           }
         </main>

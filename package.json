@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "serve": "vite --host",
+    "preview": "vite preview",
     "build": "vue-tsc --noEmit && vite build",
     "tauri:dev": "tauri dev",
     "tauri:build": "tauri build",
@@ -18,17 +19,19 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
-    "@tauri-apps/api": "^1.6.0",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-fs": "^2.2.0",
     "axios": "^1.7.9",
+    "core": "link:@tauri-apps/api/core",
     "element-plus": "^2.9.4",
-    "pinia": "^2.3.1",
+    "pinia": "^3.0.1",
     "vue": "^3.5.13",
     "vue-axios": "^3.5.2",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.9",
-    "@tauri-apps/cli": "^1.6.3",
+    "@tauri-apps/cli": "^2",
     "@types/jest": "^29.5.14",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",

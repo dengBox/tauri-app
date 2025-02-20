@@ -124,6 +124,12 @@ const menuList = reactive([
         children: []
       },
       {
+        url: '/common/test/keyboard',
+        text: '测试键鼠',
+        icon: shallowRef(Document),
+        children: []
+      },
+      {
         url: '/common/test/index',
         text: '测试页面',
         icon: shallowRef(Document),
