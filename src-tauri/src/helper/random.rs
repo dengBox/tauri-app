@@ -1,21 +1,20 @@
-pub struct Random {
-}
-
 use rand::Rng;
+pub struct Random {}
+
 impl Random {
-    fn generate_nums (&self, num: u32) -> Vec<u32> {
+    fn generate_nums(&self, num: u32) -> Vec<u32> {
         let mut _all_nums = vec![];
         for i in 1..num {
             _all_nums.push(i)
         }
-        return _all_nums
+        return _all_nums;
     }
-    pub fn grand_lotto (&self) -> Vec<u32> {
+    pub fn grand_lotto(&self) -> Vec<u32> {
         let mut number = 0;
         let mut result_list = vec![];
         let mut red_list = self.generate_nums(36);
         let mut blue_list = self.generate_nums(13);
-        
+
         while number < 7 {
             let new_num;
             if number < 5 {
