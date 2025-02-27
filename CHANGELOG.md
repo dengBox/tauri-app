@@ -1,9 +1,10 @@
-## [0.0.1](https://github.com/dengBox/tauri-app/compare/v0.0.2...v0.0.1) (2025-02-24)
+## [0.0.1](https://github.com/dengBox/tauri-app/compare/v0.0.2...v0.0.1) (2025-02-27)
 
 ### 🌟 新功能
 范围|描述|commitId
 --|--|--
  - | 修改前端页面，增加测试路由 | [9a54a42](https://github.com/dengBox/tauri-app/commit/9a54a42)
+ - | 增加 新函数 | [a9c5180](https://github.com/dengBox/tauri-app/commit/a9c5180)
  - | 增加文档示例 | [1b7a336](https://github.com/dengBox/tauri-app/commit/1b7a336)
  add keyboard | 增加键盘测试页面 | [505f07f](https://github.com/dengBox/tauri-app/commit/505f07f)
 
@@ -33,24 +34,7 @@
 --|--|--
  - | fix num filter | [c80e717](https://github.com/dengBox/tauri-app/commit/c80e717)
 
-## [0.0.1](https://github.com/dengBox/tauri-app/compare/v0.1.0...v0.0.1) (2023-02-14)
-
-### 📦 持续集成
-范围|描述|commitId
---|--|--
- - | update ci | [daaa18c](https://github.com/dengBox/tauri-app/commit/daaa18c)
-
-
-范围|描述|commitId
---|--|--
- - | Update release.yml | [12cf1ce](https://github.com/dengBox/tauri-app/commit/12cf1ce)
- - | Update release.yml | [eb23316](https://github.com/dengBox/tauri-app/commit/eb23316)
- - | Update release.yml | [fdeef21](https://github.com/dengBox/tauri-app/commit/fdeef21)
- - | Update release.yml | [57fb2b7](https://github.com/dengBox/tauri-app/commit/57fb2b7)
- - | Update release.yml | [c9b7b7f](https://github.com/dengBox/tauri-app/commit/c9b7b7f)
- - | Update release.yml | [f19cc1a](https://github.com/dengBox/tauri-app/commit/f19cc1a)
-
-# [0.1.0](https://github.com/dengBox/tauri-app/compare/f9d1ca9...v0.1.0) (2023-02-14)
+## [0.0.1](https://github.com/dengBox/tauri-app/compare/f9d1ca9...v0.0.1) (2023-02-14)
 
 ### 🌟 新功能
 范围|描述|commitId
@@ -73,6 +57,7 @@
 --|--|--
  - | add github actions | [5413ad8](https://github.com/dengBox/tauri-app/commit/5413ad8)
  - | test ci | [acd6b3c](https://github.com/dengBox/tauri-app/commit/acd6b3c)
+ - | update ci | [daaa18c](https://github.com/dengBox/tauri-app/commit/daaa18c)
  - | update pnpm | [a9f94de](https://github.com/dengBox/tauri-app/commit/a9f94de)
  - | updatee github actions | [696df19](https://github.com/dengBox/tauri-app/commit/696df19)
 
@@ -85,6 +70,12 @@
 
 范围|描述|commitId
 --|--|--
+ - | Update release.yml | [12cf1ce](https://github.com/dengBox/tauri-app/commit/12cf1ce)
+ - | Update release.yml | [eb23316](https://github.com/dengBox/tauri-app/commit/eb23316)
+ - | Update release.yml | [fdeef21](https://github.com/dengBox/tauri-app/commit/fdeef21)
+ - | Update release.yml | [57fb2b7](https://github.com/dengBox/tauri-app/commit/57fb2b7)
+ - | Update release.yml | [c9b7b7f](https://github.com/dengBox/tauri-app/commit/c9b7b7f)
+ - | Update release.yml | [f19cc1a](https://github.com/dengBox/tauri-app/commit/f19cc1a)
  - | Delete main.yml | [426124b](https://github.com/dengBox/tauri-app/commit/426124b)
  - | Create release.yml | [9211b81](https://github.com/dengBox/tauri-app/commit/9211b81)
  - | Create main.yml | [01cd506](https://github.com/dengBox/tauri-app/commit/01cd506)

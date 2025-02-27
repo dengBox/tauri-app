@@ -38,7 +38,7 @@ const _window = new Proxy({
       return Reflect.get(target, propKey, receiver);
     }
   },
-  set: (target, propKey, value, receiver) => {
+  set: (target, propKey, value, _receiver) => {
     return Reflect.set(target, propKey, value);
   }
 });

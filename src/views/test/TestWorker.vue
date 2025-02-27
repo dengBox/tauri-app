@@ -16,13 +16,15 @@ worker.onmessage = (e) => {
   console.log(e.data);
   // workerMessage.value = e.data;
   const data = e.data;
-  let result;
+  let result: any;
   switch (data.type) {
     case 'FN':
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       result = window[data.target][data.propKey](...data.params);
       break;
   }
-  // worker.postMessage(result);
+  worker.postMessage(result);
 };
 
 worker.postMessage({

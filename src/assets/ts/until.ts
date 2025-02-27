@@ -34,7 +34,7 @@ export const deepCopy = <T>(origin: T, target?: Record<string, any> | T): T => {
   for (const key in origin) {
     if (Object.prototype.hasOwnProperty.call(origin, key)) {
       if (typeof origin[key] === 'object' && origin[key] !== null) {
-        tar[key] = isArr(origin[key]) ? [] : {};
+        (tar[key] as any) = isArr(origin[key]) ? [] : {};
         deepCopy(origin[key], tar[key]);
       } else {
         tar[key] = origin[key];

@@ -52,7 +52,7 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior (_to, _from, _savedPosition) {
     // 始终滚动到顶部
     return { top: 0 };
   }
@@ -60,7 +60,7 @@ const router = createRouter({
 
 // const token = false;
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((_to, _from, next) => {
   // if (!token && to.path !== '/login') {
   //   return next(!token ? '/login' : '/common/game');
   // }
