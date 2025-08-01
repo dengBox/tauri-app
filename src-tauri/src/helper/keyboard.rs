@@ -31,16 +31,3 @@ pub fn send_key_event (event_type: &EventType) {
     // Let ths OS catchup (at least MacOS)
     thread::sleep(delay);
 }
-
-
-// send_key_event(&EventType::KeyPress(Key::KeyS));
-// send_key_event(&EventType::KeyRelease(Key::KeyS));
-
-// send_key_event(&EventType::MouseMove { x: 0.0, y: 0.0 });
-// send_key_event(&EventType::MouseMove { x: 400.0, y: 400.0 });
-// send_key_event(&EventType::ButtonPress(Button::Left));
-// send_key_event(&EventType::ButtonRelease(Button::Right));
-// send_key_event(&EventType::Wheel {
-//     delta_x: 0,
-//     delta_y: 1,
-// });

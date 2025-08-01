@@ -39,12 +39,19 @@ const defaultCode2 = ref(9);
 const defaultCode3 = ref(9);
 const defaultCode4 = ref(8);
 
-const selectKeys = [1, 9, 9, 8];
+const selectKeys = ref([1, 9, 9, 8]);
 const keyList = ref<any>([]);
 
 listen('send_event', (e) => {
-  console.log('send_event', e);
+  selectKeys.value = e.payload as Array<number>
+
 });
+
+listen('send_end', () => {
+  console.log('执行结束', performance.now())
+});
+
+
 
 onMounted(() => {
   // invoke('start_listen_event').then(() => {
@@ -66,9 +73,9 @@ onDeactivated(() => {
 
 const startEvent = () => {
   invoke('send_event', {
-    code: selectKeys
+    code: selectKeys.value
   }).then(() => {
-    console.log('开始执行');
+    console.log('开始执行', performance.now())
   });
 };
 </script>

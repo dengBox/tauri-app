@@ -55,8 +55,8 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         api: 'modern-compiler', // or "modern"
-        silenceDeprecations: ['legacy-js-api'],
-        additionalData: '@use "./src/assets/scss/color.scss" as *;'
+        // silenceDeprecations: ['legacy-js-api'],
+        additionalData: '@use "@/assets/scss/color.scss" as *;'
       }
     }
   }
